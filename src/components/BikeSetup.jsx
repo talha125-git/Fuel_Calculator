@@ -8,7 +8,7 @@ export default function BikeSetup({ mileage, setMileage, price, setPrice }) {
       <p className="text-[0.7rem] tracking-[2px] text-green-400 m-0 mb-3 font-semibold">BIKE SETUP</p>
 
       <div className="grid grid-cols-3 gap-2.5">
-        <div>
+        <div className="flex flex-col justify-end">
           <label className="text-[0.7rem] text-green-400 tracking-[1px] font-semibold block mb-1">MILEAGE (km/L)</label>
           <input
             type="number"
@@ -17,8 +17,8 @@ export default function BikeSetup({ mileage, setMileage, price, setPrice }) {
             className="w-full bg-[#0a1a0a] border border-[#1e3a1e] rounded-lg py-2 px-2.5 text-[#f0fdf4] text-base font-semibold font-mono outline-none box-border"
           />
         </div>
-        <div>
-          <label className="text-[0.7rem] text-green-400 tracking-[1px] font-semibold block mb-1">PETROL PRICE (₨/L)</label>
+        <div className="flex flex-col justify-end">
+       <label className="text-[0.7rem] text-green-400 tracking-[1px] font-semibold block mb-1">PRICE (Rs/L)</label>
           <input
             type="number"
             value={price}
@@ -35,4 +35,4 @@ export default function BikeSetup({ mileage, setMileage, price, setPrice }) {
       </div>
     </div>
   );
-}
+}

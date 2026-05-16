@@ -24,7 +24,7 @@ export default function App() {
 
       {/* Header */}
       <div className="bg-gradient-to-br from-[#0f172a] to-[#0d1f0f] border-b border-[#1e3a1e] pt-6 px-4 pb-4">
-        <div className="max-w-[700px] mx-auto">
+        <div className="max-w-[700px] lg:max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-1">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-xl">⛽</div>
             <div>
@@ -35,60 +35,73 @@ export default function App() {
         </div>
       </div>
 
-      <div className="max-w-[700px] mx-auto p-4">
+      <div className="max-w-[700px] lg:max-w-5xl mx-auto p-4 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 lg:items-start">
 
-        {/* Bike Setup */}
-        <BikeSetup
-          mileage={mileage}
-          setMileage={setMileage}
-          price={price}
-          setPrice={setPrice}
-        />
-
-        {/* Tab Switcher */}
-        <div className="flex gap-2 mb-4">
-          {TABS.map((t) => (
-            <button key={t.id} onClick={() => setTab(t.id)}
-              className={`flex-1 py-2.5 px-1.5 rounded-xl border text-[0.78rem] cursor-pointer transition-all duration-150 ${tab === t.id ? 'border-green-500 bg-[#14532d] text-green-400 font-bold' : 'border-[#1e3a1e] bg-[#0f1f12] text-slate-500 font-normal'}`}>
-              {t.label}
-            </button>
-          ))}
+        {/* Left Column: Bike Setup & Desktop Quick Reference */}
+        <div className="lg:col-span-5 flex flex-col gap-4 order-1">
+          <BikeSetup
+            mileage={mileage}
+            setMileage={setMileage}
+            price={price}
+            setPrice={setPrice}
+          />
+          <div className="hidden lg:block">
+            <QuickReference mileage={mileage} price={price} />
+          </div>
         </div>
 
-        {/* Active Tab */}
-        {tab === "money" && (
-          <MoneyToKm
-            amount={amount}
-            setAmount={setAmount}
-            mileage={mileage}
-            price={price}
-          />
-        )}
-        {tab === "km" && (
-          <KmToMoney
-            neededKm={neededKm}
-            setNeededKm={setNeededKm}
-            mileage={mileage}
-            price={price}
-          />
-        )}
-        {tab === "check" && (
-          <CanICover
-            amount={amount}
-            setAmount={setAmount}
-            neededKm={neededKm}
-            setNeededKm={setNeededKm}
-            mileage={mileage}
-            price={price}
-          />
-        )}
+        {/* Right Column: Tabs & Calculations */}
+        <div className="lg:col-span-7 flex flex-col order-2">
+          {/* Tab Switcher */}
+          <div className="flex gap-2 mb-4">
+            {TABS.map((t) => (
+              <button key={t.id} onClick={() => setTab(t.id)}
+                className={`flex-1 py-2.5 px-1.5 rounded-xl border text-[0.78rem] cursor-pointer transition-all duration-150 ${tab === t.id ? 'border-green-500 bg-[#14532d] text-green-400 font-bold' : 'border-[#1e3a1e] bg-[#0f1f12] text-slate-500 font-normal'}`}>
+                {t.label}
+              </button>
+            ))}
+          </div>
 
-        {/* Quick Reference */}
-        <QuickReference mileage={mileage} price={price} />
+          {/* Active Tab */}
+          {tab === "money" && (
+            <MoneyToKm
+              amount={amount}
+              setAmount={setAmount}
+              mileage={mileage}
+              price={price}
+            />
+          )}
+          {tab === "km" && (
+            <KmToMoney
+              neededKm={neededKm}
+              setNeededKm={setNeededKm}
+              mileage={mileage}
+              price={price}
+            />
+          )}
+          {tab === "check" && (
+            <CanICover
+              amount={amount}
+              setAmount={setAmount}
+              neededKm={neededKm}
+              setNeededKm={setNeededKm}
+              mileage={mileage}
+              price={price}
+            />
+          )}
+        </div>
 
-        <p className="text-center text-[0.7rem] text-gray-700 mt-6">
-          Change mileage & price above to update all calculations
-        </p>
+        {/* Mobile Quick Reference */}
+        <div className="lg:hidden order-3">
+          <QuickReference mileage={mileage} price={price} />
+        </div>
+
+        {/* Footer Text */}
+        <div className="lg:col-span-12 order-4">
+          <p className="text-center text-[0.7rem] text-gray-700 mt-2 lg:mt-4">
+            Change mileage & price above to update all calculations
+          </p>
+        </div>
       </div>
 
       {/* Footer Credit */}
