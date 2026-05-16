@@ -1,5 +1,5 @@
 git add .
-git commit -m "Add gh-pages deploy config"
+git commit -m "Add tailwind css"
 git push origin main
 
 npm run deploy

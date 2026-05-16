@@ -19,23 +19,23 @@ export default function App() {
   const [tab, setTab]         = useState("money");
 
   return (
-    <div style={{ fontFamily: "'Outfit', sans-serif", background: "#080f1a", minHeight: "100vh", color: "#e2e8f0" }}>
+    <div className="font-['Outfit',sans-serif] bg-[#080f1a] min-h-screen text-[#e2e8f0]">
       <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
 
       {/* Header */}
-      <div style={{ background: "linear-gradient(135deg, #0f172a 0%, #0d1f0f 100%)", borderBottom: "1px solid #1e3a1e", padding: "1.5rem 1rem 1rem" }}>
-        <div style={{ maxWidth: 700, margin: "0 auto" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 4 }}>
-            <div style={{ width: 40, height: 40, borderRadius: 12, background: "linear-gradient(135deg, #22c55e, #16a34a)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20 }}>⛽</div>
+      <div className="bg-gradient-to-br from-[#0f172a] to-[#0d1f0f] border-b border-[#1e3a1e] pt-6 px-4 pb-4">
+        <div className="max-w-[700px] mx-auto">
+          <div className="flex items-center gap-3 mb-1">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-xl">⛽</div>
             <div>
-              <h1 style={{ fontSize: "1.5rem", fontWeight: 900, margin: 0, letterSpacing: "-0.5px", color: "#f0fdf4" }}>Fuel Calculator</h1>
-              <p style={{ fontSize: "0.75rem", color: "#4ade80", margin: 0, letterSpacing: 1 }}>PAKISTAN · PKR</p>
+              <h1 className="text-2xl font-black m-0 tracking-tight text-[#f0fdf4]">Fuel Calculator</h1>
+              <p className="text-xs text-green-400 m-0 tracking-widest">PAKISTAN · PKR</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div style={{ maxWidth: 700, margin: "0 auto", padding: "1rem" }}>
+      <div className="max-w-[700px] mx-auto p-4">
 
         {/* Bike Setup */}
         <BikeSetup
@@ -46,10 +46,10 @@ export default function App() {
         />
 
         {/* Tab Switcher */}
-        <div style={{ display: "flex", gap: 8, marginBottom: "1rem" }}>
+        <div className="flex gap-2 mb-4">
           {TABS.map((t) => (
             <button key={t.id} onClick={() => setTab(t.id)}
-              style={{ flex: 1, padding: "10px 6px", borderRadius: 12, border: `1px solid ${tab === t.id ? "#22c55e" : "#1e3a1e"}`, background: tab === t.id ? "#14532d" : "#0f1f12", color: tab === t.id ? "#4ade80" : "#64748b", fontSize: "0.78rem", fontWeight: tab === t.id ? 700 : 400, cursor: "pointer", fontFamily: "inherit", transition: "all 0.15s" }}>
+              className={`flex-1 py-2.5 px-1.5 rounded-xl border text-[0.78rem] cursor-pointer transition-all duration-150 ${tab === t.id ? 'border-green-500 bg-[#14532d] text-green-400 font-bold' : 'border-[#1e3a1e] bg-[#0f1f12] text-slate-500 font-normal'}`}>
               {t.label}
             </button>
           ))}
@@ -86,17 +86,16 @@ export default function App() {
         {/* Quick Reference */}
         <QuickReference mileage={mileage} price={price} />
 
-        <p style={{ textAlign: "center", fontSize: "0.7rem", color: "#374151", marginTop: "1.5rem" }}>
+        <p className="text-center text-[0.7rem] text-gray-700 mt-6">
           Change mileage & price above to update all calculations
         </p>
       </div>
 
       {/* Footer Credit */}
-      <div style={{ position: "fixed", bottom: 16, right: 16, background: "#0f1f12", border: "1px solid #1a3d1a", borderRadius: 10, padding: "6px 12px", display: "flex", alignItems: "center", gap: 6, backdropFilter: "blur(8px)" }}>
-        <span style={{ fontSize: "0.65rem", color: "#4b5563", letterSpacing: 0.5 }}>dev & design by</span>
-        <span style={{ fontSize: "0.72rem", fontWeight: 700, color: "#4ade80", letterSpacing: 0.5 }}>Talha</span>
+      <div className="fixed bottom-4 right-4 bg-[#0f1f12]/80 border border-[#1a3d1a] rounded-lg py-1.5 px-3 flex items-center gap-1.5 backdrop-blur-md">
+        <span className="text-[0.65rem] text-gray-600 tracking-wide">dev & design by</span>
+        <span className="text-[0.72rem] font-bold text-green-400 tracking-wide">Talha</span>
       </div>
     </div>
   );
 }
-

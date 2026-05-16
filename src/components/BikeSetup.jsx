@@ -4,35 +4,35 @@ export default function BikeSetup({ mileage, setMileage, price, setPrice }) {
   };
 
   return (
-    <div style={{ background: "#0f1f12", border: "1px solid #1a3d1a", borderRadius: 16, padding: "1.25rem", marginBottom: "1rem" }}>
-      <p style={{ fontSize: "0.7rem", letterSpacing: 2, color: "#4ade80", margin: "0 0 12px", fontWeight: 600 }}>BIKE SETUP</p>
+    <div className="bg-[#0f1f12] border border-[#1a3d1a] rounded-2xl p-5 mb-4">
+      <p className="text-[0.7rem] tracking-[2px] text-green-400 m-0 mb-3 font-semibold">BIKE SETUP</p>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
+      <div className="grid grid-cols-3 gap-2.5">
         <div>
-          <label style={{ fontSize: "0.7rem", color: "#4ade80", letterSpacing: 1, fontWeight: 600, display: "block", marginBottom: 4 }}>MILEAGE (km/L)</label>
+          <label className="text-[0.7rem] text-green-400 tracking-[1px] font-semibold block mb-1">MILEAGE (km/L)</label>
           <input
             type="number"
             defaultValue={mileage}
             onChange={(e) => handleMileageChange(e.target.value)}
-            style={{ width: "100%", background: "#0a1a0a", border: "1px solid #1e3a1e", borderRadius: 8, padding: "8px 10px", color: "#f0fdf4", fontSize: "1rem", fontWeight: 600, fontFamily: "monospace", outline: "none", boxSizing: "border-box" }}
+            className="w-full bg-[#0a1a0a] border border-[#1e3a1e] rounded-lg py-2 px-2.5 text-[#f0fdf4] text-base font-semibold font-mono outline-none box-border"
           />
         </div>
         <div>
-          <label style={{ fontSize: "0.7rem", color: "#4ade80", letterSpacing: 1, fontWeight: 600, display: "block", marginBottom: 4 }}>PETROL PRICE (₨/L)</label>
+          <label className="text-[0.7rem] text-green-400 tracking-[1px] font-semibold block mb-1">PETROL PRICE (₨/L)</label>
           <input
             type="number"
             value={price}
             onChange={(e) => setPrice(Number(e.target.value))}
-            style={{ width: "100%", background: "#0a1a0a", border: "1px solid #1e3a1e", borderRadius: 8, padding: "8px 10px", color: "#f0fdf4", fontSize: "1rem", fontWeight: 600, fontFamily: "monospace", outline: "none", boxSizing: "border-box" }}
+            className="w-full bg-[#0a1a0a] border border-[#1e3a1e] rounded-lg py-2 px-2.5 text-[#f0fdf4] text-base font-semibold font-mono outline-none box-border"
           />
         </div>
-        <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-end" }}>
-          <label style={{ fontSize: "0.7rem", color: "#4ade80", letterSpacing: 1, fontWeight: 600, display: "block", marginBottom: 4 }}>₨1 LITRE COVERS</label>
-          <div style={{ background: "#0a1a0a", border: "1px solid #1e3a1e", borderRadius: 8, padding: "8px 10px", fontSize: "1rem", fontWeight: 700, color: "#22c55e", fontFamily: "monospace" }}>
+        <div className="flex flex-col justify-end">
+          <label className="text-[0.7rem] text-green-400 tracking-[1px] font-semibold block mb-1">₨1 LITRE COVERS</label>
+          <div className="bg-[#0a1a0a] border border-[#1e3a1e] rounded-lg py-2 px-2.5 text-base font-bold text-green-500 font-mono">
             {(mileage / price * 100).toFixed(2)} km
           </div>
         </div>
       </div>
     </div>
   );
-}
+}
