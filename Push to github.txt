@@ -1,5 +1,5 @@
 git add .
-git commit -m "added flex on large screen"
+git commit -m "added favicon"
 git push origin main
 
 npm run deploy
