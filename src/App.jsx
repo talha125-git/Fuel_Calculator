@@ -8,17 +8,17 @@ import Calculator from "./components/Calculator";
 
 const TABS = [
   { id: "money", label: "💰 Money → KM" },
-  { id: "km",    label: "📍 KM → Money" },
+  { id: "km", label: "📍 KM → Money" },
   { id: "check", label: "✅ Can I Cover?" },
   { id: "calculator", label: "Calculator" },
 ];
 
 export default function App() {
   const [mileage, setMileage] = useState(55);
-  const [price, setPrice]     = useState(416);
-  const [amount, setAmount]   = useState(900);
+  const [price, setPrice] = useState(416);
+  const [amount, setAmount] = useState(900);
   const [neededKm, setNeededKm] = useState(90);
-  const [tab, setTab]         = useState("money");
+  const [tab, setTab] = useState("money");
 
   return (
     <div className="font-['Outfit',sans-serif] bg-[#080f1a] min-h-screen text-[#e2e8f0]">
@@ -55,10 +55,16 @@ export default function App() {
         {/* Right Column: Tabs & Calculations */}
         <div className="lg:col-span-7 flex flex-col order-2">
           {/* Tab Switcher */}
-          <div className="flex gap-2 mb-4">
+          <div className="flex flex-wrap gap-2 mb-4">
             {TABS.map((t) => (
-              <button key={t.id} onClick={() => setTab(t.id)}
-                className={`flex-1 py-2.5 px-1.5 rounded-xl border text-[0.78rem] cursor-pointer transition-all duration-150 ${tab === t.id ? 'border-green-500 bg-[#14532d] text-green-400 font-bold' : 'border-[#1e3a1e] bg-[#0f1f12] text-slate-500 font-normal'}`}>
+              <button
+                key={t.id}
+                onClick={() => setTab(t.id)}
+                className={`flex-1 min-w-[120px] py-2.5 px-3 rounded-xl border text-[0.8rem] cursor-pointer transition-all duration-150 text-center ${tab === t.id
+                    ? 'border-green-500 bg-[#14532d] text-green-400 font-bold'
+                    : 'border-[#1e3a1e] bg-[#0f1f12] text-slate-400 hover:text-slate-200 font-normal'
+                  }`}
+              >
                 {t.label}
               </button>
             ))}
@@ -92,7 +98,7 @@ export default function App() {
             />
           )}
           {tab === "calculator" && (
-            <Calculator/>
+            <Calculator />
           )}
         </div>
 
