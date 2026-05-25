@@ -1,5 +1,5 @@
 git add .
-git commit -m "added Live Link1 in  file"
+git commit -m "added calculator tab"
 git push origin main
 
 npm run deploy

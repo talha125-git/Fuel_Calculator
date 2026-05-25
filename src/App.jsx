@@ -4,11 +4,13 @@ import MoneyToKm from "./components/MoneyToKm";
 import KmToMoney from "./components/KmToMoney";
 import CanICover from "./components/CanICover";
 import QuickReference from "./components/QuickReference";
+import Calculator from "./components/Calculator";
 
 const TABS = [
   { id: "money", label: "💰 Money → KM" },
   { id: "km",    label: "📍 KM → Money" },
   { id: "check", label: "✅ Can I Cover?" },
+  { id: "calculator", label: "Calculator" },
 ];
 
 export default function App() {
@@ -88,6 +90,9 @@ export default function App() {
               mileage={mileage}
               price={price}
             />
+          )}
+          {tab === "calculator" && (
+            <Calculator/>
           )}
         </div>
 
