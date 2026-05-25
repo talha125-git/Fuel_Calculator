@@ -15,7 +15,7 @@ const TABS = [
 
 export default function App() {
   const [mileage, setMileage] = useState(55);
-  const [price, setPrice] = useState(416);
+  const [price, setPrice] = useState(405);
   const [amount, setAmount] = useState(900);
   const [neededKm, setNeededKm] = useState(90);
   const [tab, setTab] = useState("money");

@@ -1,5 +1,5 @@
 git add .
-git commit -m "added calculator tab wrape it "
+git commit -m "405rs / ltr "
 git push origin main
 
 npm run deploy
