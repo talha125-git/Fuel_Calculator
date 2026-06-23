@@ -15,7 +15,7 @@ const TABS = [
 
 export default function App() {
   const [mileage, setMileage] = useState(55);
-  const [price, setPrice] = useState(405);
+  const [price, setPrice] = useState(300);
   const [amount, setAmount] = useState(900);
   const [neededKm, setNeededKm] = useState(90);
   const [tab, setTab] = useState("money");
@@ -61,8 +61,8 @@ export default function App() {
                 key={t.id}
                 onClick={() => setTab(t.id)}
                 className={`flex-1 min-w-[120px] py-2.5 px-3 rounded-xl border text-[0.8rem] cursor-pointer transition-all duration-150 text-center ${tab === t.id
-                    ? 'border-green-500 bg-[#14532d] text-green-400 font-bold'
-                    : 'border-[#1e3a1e] bg-[#0f1f12] text-slate-400 hover:text-slate-200 font-normal'
+                  ? 'border-green-500 bg-[#14532d] text-green-400 font-bold'
+                  : 'border-[#1e3a1e] bg-[#0f1f12] text-slate-400 hover:text-slate-200 font-normal'
                   }`}
               >
                 {t.label}

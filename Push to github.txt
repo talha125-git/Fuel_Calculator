@@ -1,5 +1,5 @@
 git add .
-git commit -m "405rs / ltr "
+git commit -m "300rs / ltr "
 git push origin main
 
 npm run deploy
