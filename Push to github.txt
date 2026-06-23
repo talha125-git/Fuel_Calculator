@@ -1,5 +1,5 @@
 git add .
-git commit -m "fix: update min-w-[120px] to min-w-30 in button class "
+git commit -m "fix: handle zero amount input in MoneyToKm component"
 git push origin main
 
 npm run deploy

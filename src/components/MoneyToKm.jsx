@@ -8,8 +8,8 @@ export default function MoneyToKm({ amount, setAmount, mileage, price }) {
       <label className="text-xs text-slate-400 block mb-1.5">Enter amount in Rupees</label>
       <input
         type="number"
-        value={amount}
-        onChange={(e) => setAmount(Number(e.target.value))}
+        value={amount === 0 ? '' : amount}
+        onChange={(e) => setAmount(e.target.value ? Number(e.target.value) : 0)}
         className="w-full bg-[#0a1a0a] border-2 border-green-500 rounded-lg py-3 px-3.5 text-[#f0fdf4] text-xl font-bold font-mono outline-none box-border mb-5"
       />
 
@@ -31,4 +31,4 @@ export default function MoneyToKm({ amount, setAmount, mileage, price }) {
       </div>
     </div>
   );
-}
+}
