@@ -18,7 +18,7 @@ export default function BikeSetup({ mileage, setMileage, price, setPrice }) {
           />
         </div>
         <div className="flex flex-col justify-end">
-       <label className="text-[0.7rem] text-green-400 tracking-[1px] font-semibold block mb-1">PRICE (Rs/L)</label>
+          <label className="text-[0.7rem] text-green-400 tracking-[1px] font-semibold block mb-1">PRICE (Rs/L)</label>
           <input
             type="number"
             value={price}

@@ -1,5 +1,5 @@
 git add .
-git commit -m "comment ₨1 LITRE COVERS btn "
+git commit -m "fix: correct indentation for price label in BikeSetup component "
 git push origin main
 
 npm run deploy
