@@ -7,7 +7,7 @@ export default function BikeSetup({ mileage, setMileage, price, setPrice }) {
     <div className="bg-[#0f1f12] border border-[#1a3d1a] rounded-2xl p-5 mb-4">
       <p className="text-[0.7rem] tracking-[2px] text-green-400 m-0 mb-3 font-semibold">BIKE SETUP</p>
 
-      <div className="grid grid-cols-3 gap-2.5">
+      <div className="grid grid-cols-2 gap-2.5">
         <div className="flex flex-col justify-end">
           <label className="text-[0.7rem] text-green-400 tracking-[1px] font-semibold block mb-1">MILEAGE (km/L)</label>
           <input
