@@ -21,8 +21,8 @@ export default function BikeSetup({ mileage, setMileage, price, setPrice }) {
           <label className="text-[0.7rem] text-green-400 tracking-[1px] font-semibold block mb-1">PRICE (Rs/L)</label>
           <input
             type="number"
-            value={price}
-            onChange={(e) => setPrice(Number(e.target.value))}
+            value={price === 0 ? '' : price}
+            onChange={(e) => setPrice(e.target.value ? Number(e.target.value) : 0)}
             className="w-full bg-[#0a1a0a] border border-[#1e3a1e] rounded-lg py-2 px-2.5 text-[#f0fdf4] text-base font-semibold font-mono outline-none box-border"
           />
         </div>

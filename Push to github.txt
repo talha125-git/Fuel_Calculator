@@ -1,5 +1,5 @@
 git add .
-git commit -m "fix: handle zero amount input in MoneyToKm component"
+git commit -m "fix: handle zero price input in BikeSetup component"
 git push origin main
 
 npm run deploy
