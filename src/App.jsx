@@ -37,7 +37,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="max-w-[700px] lg:max-w-5xl mx-auto p-4 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 lg:items-start">
+      <div className="max-w-175 lg:max-w-5xl mx-auto p-4 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 lg:items-start">
 
         {/* Left Column: Bike Setup & Desktop Quick Reference */}
         <div className="lg:col-span-5 flex flex-col gap-4 order-1">
