@@ -60,7 +60,7 @@ export default function App() {
               <button
                 key={t.id}
                 onClick={() => setTab(t.id)}
-                className={`flex-1 min-w-[120px] py-2.5 px-3 rounded-xl border text-[0.8rem] cursor-pointer transition-all duration-150 text-center ${tab === t.id
+                className={`flex-1 min-w-30 py-2.5 px-3 rounded-xl border text-[0.8rem] cursor-pointer transition-all duration-150 text-center ${tab === t.id
                   ? 'border-green-500 bg-[#14532d] text-green-400 font-bold'
                   : 'border-[#1e3a1e] bg-[#0f1f12] text-slate-400 hover:text-slate-200 font-normal'
                   }`}

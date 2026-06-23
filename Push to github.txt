@@ -1,5 +1,5 @@
 git add .
-git commit -m "fix: update max-w-[700px] to max-w-175  "
+git commit -m "fix: update min-w-[120px] to min-w-30 in button class "
 git push origin main
 
 npm run deploy
