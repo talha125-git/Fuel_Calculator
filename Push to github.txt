@@ -1,5 +1,5 @@
 git add .
-git commit -m "fix: update class names for gradient backgrounds in App component  "
+git commit -m "fix: update max-w-[700px] to max-w-175  "
 git push origin main
 
 npm run deploy
