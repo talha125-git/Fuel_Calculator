@@ -1,5 +1,5 @@
 git add .
-git commit -m "fix: update values in QuickReference component for accurate calculations "
+git commit -m "fix: add 700 in QuickReference "
 git push origin main
 
 npm run deploy
