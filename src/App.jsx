@@ -25,10 +25,10 @@ export default function App() {
       <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
 
       {/* Header */}
-      <div className="bg-gradient-to-br from-[#0f172a] to-[#0d1f0f] border-b border-[#1e3a1e] pt-6 px-4 pb-4">
+      <div className="bg-linear-to-br from-[#0f172a] to-[#0d1f0f] border-b border-[#1e3a1e] pt-6 px-4 pb-4">
         <div className="max-w-[700px] lg:max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-1">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-xl">⛽</div>
+            <div className="w-10 h-10 rounded-xl bg-linear-to-br from-green-500 to-green-600 flex items-center justify-center text-xl">⛽</div>
             <div>
               <h1 className="text-2xl font-black m-0 tracking-tight text-[#f0fdf4]">Fuel Calculator</h1>
               <p className="text-xs text-green-400 m-0 tracking-widest">PAKISTAN · PKR</p>

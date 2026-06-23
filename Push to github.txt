@@ -1,5 +1,5 @@
 git add .
-git commit -m "fix: correct spacing in QuickReference  "
+git commit -m "fix: update class names for gradient backgrounds in App component  "
 git push origin main
 
 npm run deploy
