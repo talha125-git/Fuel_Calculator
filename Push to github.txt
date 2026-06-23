@@ -1,5 +1,5 @@
 git add .
-git commit -m "fix: add 700 in QuickReference "
+git commit -m "fix: correct spacing in QuickReference  "
 git push origin main
 
 npm run deploy
