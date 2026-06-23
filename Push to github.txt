@@ -1,5 +1,5 @@
 git add .
-git commit -m "fix: adjust grid layout in BikeSetup component "
+git commit -m "fix: update values in QuickReference component for accurate calculations "
 git push origin main
 
 npm run deploy
